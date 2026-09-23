@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joaquina &amp; Gustavo</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nos casamos | Joaquina &amp; Gustavo">
+  <meta property="og:description" content="Te invitamos a celebrar nuestro matrimonio.">
+  <meta property="og:image" content="images/FOTOINI.jpeg">
+  <meta name="keywords" content="invitación de boda, Joaquina, Gustavo, boda, amor, celebración">
+  <meta name="author" content="Two Design | Invitaciones Digitales">
+  <link rel="stylesheet" href="style.css">
+  <!-- (Opcional) Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&amp;family=Pinyon+Script&amp;family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- ===================== HERO / SOBRE (PORTADA) ===================== -->
+<header class="cover" id="cover">
+  <div class="cover-inner">
+    <div class="mono">
+      <img src="images/MONOGRAMA-BJ.png" alt="Monograma de Joaquina y Gustavo" class="mono-img">
+    </div>
+    <h1 class="couple">Joaquina <span class="amp">&amp;</span> Gustavo</h1>
+    <p class="tag">Nos casamos</p>
+
+    <button class="envelope-wrap" id="btnOpenEnvelope" type="button" aria-label="Abrir invitación desde sobre">
+      <img class="envelope" src="images/ENVELOPE.png" alt="Sobre invitación">
+    </button>
+
+    <div class="guest-card">
+      <div class="guest-line" id="guestCardName">Nombre del invitado</div>
+      <div class="guest-sub">Hemos reservado</div>
+      <div class="guest-seats">
+        <span id="guestCardSeats">x</span> <span id="guestCardSeatsTxt">lugares</span> en esta celebración
+      </div>
+    </div>
+
+    <button class="btn-primary" id="btnOpenInvite" type="button">
+      Abrir invitación
+    </button>
+  </div>
+
+</header>
+
+<!-- ===================== CONTENIDO INVITACIÓN ===================== -->
+<main id="invitation" class="invitation" aria-hidden="true">
+
+  <!-- HERO FOTO -->
+  <section class="hero-photo fade-in-element" id="hero">
+    <div class="hero-overlay">
+      <div class="mono hero-mono fade-in-element">
+        <img src="images/MONOGRAMA-BJ.png" alt="Monograma de Joaquina y Gustavo" class="mono-img hero-mono-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- NOMBRES EDITORIAL + FECHA VERTICAL + MÚSICA -->
+  <section class="names-editorial fade-in-element" id="names">
+    <p class="intro-text intro-verse intro-last">
+      <span>Hoy elegimos caminar juntos para toda la vida.</span>
+      <span>Nos haría muy felices que nos acompañaras a dar este primer paso.</span>
+    </p>
+
+    <div class="names-grid">
+      <div class="names-block">
+        <div class="name-lines">
+          <div>Joaquina</div>
+          <div class="and">&amp;</div>
+          <div>Gustavo</div>
+        </div>
+      </div>
+
+      <div class="date-vertical">
+        <span>12</span>
+        <span>12</span>
+        <span>26</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CONTADOR -->
+  <section class="countdown fade-in-element" id="countdown">
+    <h3>Solo faltan</h3>
+
+    <div class="count-row">
+
+      <div class="count-item">
+        <div class="flip" id="flipDays">
+          <div class="top"><span class="digit">00</span></div>
+          <div class="bottom"><span class="digit">00</span></div>
+          <div class="top-flip"><span class="digit">00</span></div>
+          <div class="bottom-flip"><span class="digit">00</span></div>
+        </div>
+        <div class="label">DÍAS</div>
+      </div>
+  
+      <div class="count-item">
+        <div class="flip" id="flipHours">
+          <div class="top"><span class="digit">00</span></div>
+          <div class="bottom"><span class="digit">00</span></div>
+          <div class="top-flip"><span class="digit">00</span></div>
+          <div class="bottom-flip"><span class="digit">00</span></div>
+        </div>
+        <div class="label">HORAS</div>
+      </div>
+  
+      <div class="count-item">
+        <div class="flip" id="flipMins">
+          <div class="top"><span class="digit">00</span></div>
+          <div class="bottom"><span class="digit">00</span></div>
+          <div class="top-flip"><span class="digit">00</span></div>
+          <div class="bottom-flip"><span class="digit">00</span></div>
+        </div>
+        <div class="label">MINUTOS</div>
+      </div>
+  
+      <div class="count-item">
+        <div class="flip" id="flipSecs">
+          <div class="top"><span class="digit">00</span></div>
+          <div class="bottom"><span class="digit">00</span></div>
+          <div class="top-flip"><span class="digit">00</span></div>
+          <div class="bottom-flip"><span class="digit">00</span></div>
+        </div>
+        <div class="label">SEGUNDOS</div>
+      </div>
+    </div>
+
+    <a class="btn-outline calendar-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Boda%20de%20Joaquina%20y%20Gustavo&amp;dates=20261212T100000/20261212T235900&amp;ctz=America%2FGuatemala&amp;details=Ceremonia%20en%20Escuela%20de%20Cristo%20a%20las%2010%3A00%20a.m.%20Recepci%C3%B3n%20en%20Jard%C3%ADn%20de%20Eventos%20Santa%20In%C3%A9s.&amp;location=Escuela%20de%20Cristo%2C%20Antigua%2C%20Sacatep%C3%A9quez" target="_blank" rel="noopener">Agregar al calendario</a>
+
+    <div class="half-photo">
+      <img src="images/S1.jpeg" alt="Foto pareja">
+    </div>
+  </section>
+
+  <!-- LUGARES Y HORARIOS -->
+  <section class="venues fade-in-element" id="venues">
+    <article class="venue-item venue-item-ceremony">
+      <div class="event-icon">
+        <img src="images/CHURCH.png" alt="">
+      </div>
+      <p class="venue-title">Ceremonia</p>
+      <p class="venue-place">Escuela de Cristo</p>
+      <p class="venue-address">Calle de los Pasos y Calle de Fray Rodrigo de la Cruz, Antigua, Sacatepéquez</p>
+      <p class="venue-time">10:00 a.m.</p>
+      <a class="btn-venue" href="https://waze.com/ul/h9fx6z2uqy" target="_blank" rel="noopener">Cómo llegar</a>
+    </article>
+
+    <article class="venue-item">
+      <div class="event-icon">
+        <img src="images/CHEERS.png" alt="">
+      </div>
+      <p class="venue-title">Recepción</p>
+      <p class="venue-place">Jardín de Eventos Santa Inés</p>
+      <p class="venue-address">Callejón La Cruz Casa 1, Aldea Santa Inés, Antigua Guatemala, Sacatepéquez</p>
+      <p class="venue-time">Hora por confirmar</p>
+      <span class="btn-venue is-disabled" aria-disabled="true">Ubicación pendiente</span>
+    </article>
+  </section>
+
+  <section class="full-sep" style="background-image:url('images/S2.jpeg')"></section>
+
+  <!-- ATTIRE -->
+  <section class="dress fade-in-element" id="dress">
+    <div class="event-icon">
+    <img src="images/DRESSCODE.png" alt="">
+    </div>
+    <h3 class="section-title">Dress Code</h3>
+    <p class="venue-title">VESTIMENTA FORMAL</p>
+    <p class="dress-note section-copy">Vestimenta formal en tonos de azul, eligiendo libremente dentro de nuestra paleta de colores. El blanco será exclusivo para la novia.</p>
+    <div class="palette-block" aria-label="Paleta de colores sugerida">
+      <p class="palette-title">Paleta de colores</p>
+      <div class="palette-swatches">
+        <div class="palette-item">
+          <span class="palette-circle" style="--swatch:#011D4F" aria-hidden="true"></span>
+        </div>
+        <div class="palette-item">
+          <span class="palette-circle" style="--swatch:#2B518F" aria-hidden="true"></span>
+        </div>
+        <div class="palette-item">
+          <span class="palette-circle" style="--swatch:#4D8AB6" aria-hidden="true"></span>
+        </div>
+        <div class="palette-item">
+          <span class="palette-circle" style="--swatch:#3270D3" aria-hidden="true"></span>
+        </div>
+        <div class="palette-item">
+          <span class="palette-circle" style="--swatch:#64A4E2" aria-hidden="true"></span>
+        </div>
+        <div class="palette-item">
+          <span class="palette-circle" style="--swatch:#B6D5F1" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+    <p class="dress-note section-copy dress-comfort-note">Como la recepción será en jardín, sugerimos llevar un segundo par de zapatos cómodos para disfrutar de la celebración.</p>
+  </section>
+
+  <!-- MESA DE REGALOS -->
+<!-- ================= MESA DE REGALOS ================= -->
+<section class="gifts fade-in-element" id="gifts">
+
+  <div class="event-icon">
+    <img src="images/GIFT.png" alt="">
+  </div>
+
+    <h3 class="section-title">Lluvia de Sobres</h3>
+
+  <p class="gifts-strong section-copy">
+    <span>Su presencia en este día tan especial es nuestro mejor regalo.</span>
+    <span>Si desean tener un detalle con nosotros, pueden hacerlo a través de las siguientes opciones.</span>
+  </p>
+
+  <div class="gifts-buttons">
+    <button class="btn-venue" id="btnOpenGiftModal" type="button">Ver opciones</button>
+  </div>
+
+</section>
+
+<div id="giftModalBackdrop" class="transfer-backdrop" aria-hidden="true" style="display:none">
+  <div class="transfer-modal gift-modal" role="dialog" aria-modal="true" aria-labelledby="giftModalTitle">
+    <button class="transfer-close" id="btnCloseGiftModal" type="button" aria-label="Cerrar opciones de regalo">×</button>
+    <h3 id="giftModalTitle">Opciones de regalo</h3>
+    <p class="transfer-names">Lluvia de sobres / Depósito</p>
+    <div class="transfer-info gift-accounts">
+      <article>
+        <strong>Joaquina Chacón</strong>
+        <p>Cuenta de ahorro</p>
+        <p>Banco Industrial</p>
+        <p class="account-number">3676020</p>
+      </article>
+      <article>
+        <strong>César Castellanos</strong>
+        <p>Cuenta de ahorro</p>
+        <p>BAC</p>
+        <p class="account-number">968533737</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<section class="playlist fade-in-element" id="playlist">
+  <div class="event-icon">
+    <img src="images/PLAYLIST.png" alt="">
+  </div>
+  <h3 class="section-title">Playlist</h3>
+  <p class="section-copy">Suma esas canciones que sabes que no pueden faltar en nuestra boda.</p>
+  <a class="btn-venue" href="https://open.spotify.com/playlist/38DyJE5cqpppd1fWidMMGq?si=31c6f8aafd9f4763&amp;pt=3b3a776ce4de778a078cc55adac141f8" target="_blank" rel="noopener">Spotify</a>
+</section>
+
+<section class="full-sep" style="background-image:url('images/H1.jpeg')"></section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<section class="no-kids fade-in-element" id="noKids">
+  <h3 class="section-title">Una celebración solo para adultos</h3>
+  <p class="section-copy">Con cariño, hemos decidido que nuestra celebración sea únicamente para adultos. Gracias por comprender y acompañarnos en este día tan especial.</p>
+</section>
+
+<section class="wedding-photos fade-in-element" id="weddingPhotos">
+  <div class="event-icon">
+    <img src="images/CAMERA.png" alt="">
+  </div>
+  <h3 class="section-title">¡Hagamos de los recuerdos una realidad!</h3>
+  <p class="section-copy">Comparte las fotografías que hagan aún más especiales los recuerdos de nuestra boda.</p>
+  <div class="photos-qr" id="weddingPhotosQr" aria-label="Código QR para subir fotografías"></div>
+  <a
+    id="weddingPhotosLink"
+    class="btn-venue"
+    href="https://drive.google.com/drive/folders/1uL_d6Jq0EPez5_sXo75Hbnd3_uITV7me?usp=drive_link"
+    target="_blank"
+    rel="noopener"
+  >Subir fotografías</a>
+</section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+<section class="wishes fade-in-element" id="wishesSection">
+  <div class="event-icon">
+    <img src="images/BUENOSDESEOS.png" alt="">
+  </div>
+  <h3 class="section-title">Buenos Deseos</h3>
+  <p class="wishes-strong section-copy">
+    Déjanos un mensaje lleno de cariño para guardar este recuerdo por siempre.
+  </p>
+
+  <div class="wishes-buttons">
+    <button class="btn-venue" type="button" onclick="toggleWishForm()">Escribir Deseo</button>
+    <button class="btn-venue" type="button" onclick="toggleWishes()">Ver Deseos</button>
+  </div>
+
+  <div class="wish-form-panel hidden" id="wish-form-panel">
+    <form class="wish-form" id="wish-form" onsubmit="return submitWish(event)">
+      <label for="wish-name" class="wish-label">Nombre</label>
+      <input id="wish-name" type="text" autocomplete="name" required>
+
+      <label for="wish-message" class="wish-label">Mensaje</label>
+      <textarea id="wish-message" rows="4" required></textarea>
+
+      <button class="btn-venue" type="submit">Enviar Deseo</button>
+      <p class="wish-status" id="wish-status" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <div class="wishes-list hidden" id="wishes"></div>
+</section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+  <!-- RSVP (TU BLOQUE) -->
+  <!-- Pega aquí exactamente tu sección RSVP + Modal (como lo enviaste) -->
+  <!-- ================= RSVP SECTION ================= -->
+<section class="rsvp fade-in-element" id="rsvpSection">
+  <div class="event-icon">
+    <img src="images/RSVP.png" alt="">
+  </div>
+  <h3 class="section-title">Confirma tu Asistencia</h3>
+  <p class="rsvp-strong section-copy">
+    Nos encantará compartir este día con ustedes. Les agradeceremos confirmar su asistencia a más tardar el 31 de octubre de 2026.
+  </p>
+
+  <div class="rsvp-inline" id="rsvpInline">
+    <label for="rsvpNombre" class="rsvp-label">Nombre</label>
+    <input id="rsvpNombre" type="text" readonly>
+
+    <p class="rsvp-label rsvp-choice-label">¿Asistirás?</p>
+    <div class="rsvp-actions">
+      <button id="btnRsvpSi" class="rsvp-btn rsvp-yes" type="button" aria-pressed="false">Sí, con mucho gusto.</button>
+      <button id="btnRsvpNo" class="rsvp-btn rsvp-no" type="button" aria-pressed="false">No, lamentablemente no podré.</button>
+    </div>
+
+    <div id="rsvpGuestsWrap" class="rsvp-guests-wrap" style="display:none">
+      <label for="rsvpGuests" class="rsvp-label">Total de personas que asistirán, incluyéndote</label>
+      <select id="rsvpGuests"></select>
+    </div>
+
+    <button id="btnConfirmarRsvp" type="button">Confirmar</button>
+  </div>
+
+  <div id="msgRsvp" class="rsvp-msg" style="display:none"></div>
+</section>
+
+<div id="rsvpResultBackdrop" class="transfer-backdrop" aria-hidden="true" style="display:none">
+  <div class="transfer-modal" role="dialog" aria-modal="true" aria-labelledby="rsvpResultTitle">
+    <button class="transfer-close" id="btnCloseRsvpResult" type="button" aria-label="Cerrar confirmación">×</button>
+    <h3 id="rsvpResultTitle">Confirmación</h3>
+    <p class="rsvp-result-text" id="rsvpResultText"></p>
+    <button class="btn-venue" id="btnOkRsvpResult" type="button">Entendido</button>
+  </div>
+</div>
+
+  <!-- FOTO CAMBIANTE -->
+  <section class="full-sep full-sep-rotating" id="rotatingSep">
+    <img id="rotatingSepImg" src="images/FS1.jpeg" alt="Foto pareja">
+  </section>
+
+  <!-- CIERRE -->
+  <section class="closing fade-in-element" id="closing">
+    <p class="closing-quote">Volvámonos eternos.</p>
+    <h3>Joaquina &amp; Gustavo</h3>
+    <p>12.12.26</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div id="social-icons">
+<a href="https://wa.me/50236011737" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<a href="https://www.facebook.com/thetwodesign" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+  <i class="fab fa-facebook"></i>
+</a>
+<a href="https://www.instagram.com/thetwodesign" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+</div>
+    <div class="footer-logo">
+      <img id="footer-logo" alt="Logo de la empresa" src="images/logo.png">
+    </div>
+  </footer>
+
+</main>
+<audio id="weddingMusic" src="music.mp3" preload="auto" loop></audio>
+<button class="music-bubble" id="musicBubble" type="button" aria-label="Pausar música" aria-pressed="true" hidden>
+  <i class="fa-solid fa-pause" aria-hidden="true"></i>
+</button>
+<script src="config.js"></script>
+<script type="module" src="database.js"></script>
+<script src="loads.js"></script>
+<script src="rsvp.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+  
