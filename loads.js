@@ -1,6 +1,12 @@
 // ===================== LOADS.JS =====================
 // 1) Lista de invitados
-const guests = [];
+const guests = [
+  { id: 1, name: "Ana Martinez", passes: 2 },
+  { id: 2, name: "Carlos Ramirez", passes: 1 },
+  { id: 3, name: "Laura Hernandez", passes: 3 },
+  { id: 4, name: "Diego Morales", passes: 2 },
+  { id: 5, name: "Sofia Castillo", passes: 4 },
+];
 
 window.guests = guests;
 window.LocalGuestSeeds = {
