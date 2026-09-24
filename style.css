@@ -271,7 +271,7 @@ a{
     position:absolute;
     inset:0;
     background:url("images/FOTOINI.jpeg") center/cover no-repeat;
-    filter:grayscale(100%) contrast(1.08) brightness(.92);
+    filter:none;
     transform:scale(1.01);
   }
   .hero-overlay{

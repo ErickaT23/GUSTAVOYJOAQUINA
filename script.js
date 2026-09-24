@@ -34,8 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // 5) Foto separador rotativa (si existe el elemento)
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     initRotatingSep([
-      "images/FS1.jpeg",
-      "images/FS2.jpeg",
+      "images/H2.jpeg",
+      "images/V3.jpeg",
+      "images/V4.jpeg",
     ]);
   }
 });
