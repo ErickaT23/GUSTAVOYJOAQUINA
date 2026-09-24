@@ -258,25 +258,29 @@ function initCountdown(targetISO) {
 function initRotatingSep(images){
 
   const imgEl = document.getElementById("rotatingSepImg");
-  if(!imgEl || !images || images.length === 0) return;
+  const nextImgEl = document.getElementById("rotatingSepImgNext");
+  if(!imgEl || !nextImgEl || !images || images.length === 0) return;
 
   let currentIndex = 0;
+  let activeImg = imgEl;
+  let hiddenImg = nextImgEl;
 
   function changeImage(){
+    const nextIndex = (currentIndex + 1) % images.length;
+    const nextImage = new Image();
 
-    imgEl.style.opacity = 0;
+    nextImage.onload = () => {
+      hiddenImg.src = nextImage.src;
+      hiddenImg.style.opacity = 1;
+      activeImg.style.opacity = 0;
+      currentIndex = nextIndex;
 
-    setTimeout(() => {
+      const previousActive = activeImg;
+      activeImg = hiddenImg;
+      hiddenImg = previousActive;
+    };
 
-      currentIndex = (currentIndex + 1) % images.length;
-
-      imgEl.src = images[currentIndex];
-
-      imgEl.onload = () => {
-        imgEl.style.opacity = 1;
-      };
-
-    }, 400);
+    nextImage.src = images[nextIndex];
 
   }
 
