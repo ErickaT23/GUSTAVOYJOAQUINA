@@ -6,7 +6,7 @@
     --gold-3: #ead59a;
     --gold-4: #fff7dc;
     --gold-5: #9a742e;
-    --gold-strong-gradient: linear-gradient(120deg, #5f4b2f 0%, #80663d 24%, #ad9364 48%, #d6c49b 58%, #9a7d4c 76%, #624d30 100%);
+    --gold-strong-gradient: linear-gradient(120deg, #5f4b2f 0%, #80663d 24%, #ad9364 48%, #b7a06f 58%, #9a7d4c 76%, #624d30 100%);
 
     --burgundy-base: #011D4F;
     --burgundy-dark: #001536;
@@ -405,9 +405,9 @@ a{
   }
 
   .and{
-    font-family: var(--text);
+    font-family: var(--title);
     font-size: 40px;
-    font-style: italic;
+    font-style: normal;
         /* Degradado dorado */
         background:linear-gradient(135deg, #8b6a3e 0%, #c9a26a 24%, #8d7244 48%, #e8c997 66%, #b38954 100%);
         -webkit-background-clip: text;
@@ -1016,6 +1016,10 @@ a{
     background-position: center;
     background-repeat: no-repeat;
   }
+.full-sep-v2{
+    background-size: 110% auto !important;
+    background-position: center center;
+  }
 /* SOLO el separador rotativo */
 .full-sep-rotating{
     position: relative;
@@ -1320,10 +1324,13 @@ a{
   .closing p{
     margin: 0;
     font-family: var(--text);
-    font-size: 15px;
+    font-size: 30px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: rgba(0,0,0,0.55);
+    background: linear-gradient(135deg, #8b6a3e 0%, #c9a26a 24%, #8d7244 48%, #e8c997 66%, #b38954 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   /* Línea decorativa sutil */
   .closing::after{
@@ -1340,7 +1347,7 @@ a{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    background: var(--burgundy-base);
+    background: #b9a5cf;
     flex-direction: column;
   }
   .footer-brand{

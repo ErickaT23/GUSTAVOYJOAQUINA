@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     initRotatingSep([
       "images/H2.webp",
-      "images/V3.webp",
       "images/V4.webp",
     ]);
   }
