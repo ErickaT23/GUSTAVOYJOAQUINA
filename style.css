@@ -1017,8 +1017,19 @@ a{
     background-repeat: no-repeat;
   }
 .full-sep-v2{
-    background-size: 110% auto !important;
+    background-size: 131% auto !important;
     background-position: center center;
+  }
+
+.gift-cash{
+    margin: 12px 0 0;
+    font-family: var(--text);
+    font-size: 18px;
+    background: var(--gold-strong-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 /* SOLO el separador rotativo */
 .full-sep-rotating{
