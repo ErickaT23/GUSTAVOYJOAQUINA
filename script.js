@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initFlipCountdown("2026-12-12T10:00:00-06:00");
 
   // 5) Foto separador rotativa (si existe el elemento)
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    initRotatingSep([
-      "images/H2.webp",
-      "images/V4.webp",
-    ]);
-  }
+  // La rotación es un cambio de contenido, no una animación de movimiento.
+  // Debe funcionar también en iPhone aunque el usuario reduzca el movimiento.
+  initRotatingSep([
+    "images/H2.webp",
+    "images/V4.webp",
+  ]);
 });
 
 function initGiftModal() {
@@ -261,6 +261,7 @@ function initRotatingSep(images){
   if(!imgEl || !nextImgEl || !images || images.length === 0) return;
 
   let currentIndex = 0;
+  let timer;
   let activeImg = imgEl;
   let hiddenImg = nextImgEl;
 
@@ -283,7 +284,9 @@ function initRotatingSep(images){
 
   }
 
-  setInterval(changeImage, 5000);
+  timer = window.setInterval(changeImage, 5000);
+  // Evita dejar un intervalo activo si la sección se elimina dinámicamente.
+  window.addEventListener("pagehide", () => window.clearInterval(timer), { once: true });
 }
 
 //contador

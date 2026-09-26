@@ -293,7 +293,8 @@ a{
     background: linear-gradient(135deg, #8b6a3e 0%, #c9a26a 24%, #8d7244 48%, #e8c997 66%, #b38954 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+     color: #b38954;
+     -webkit-text-fill-color: transparent;
     text-shadow: 0 1px 0 rgba(255, 245, 228, 0.52), 0 4px 12px rgba(170, 132, 76, 0.2);
     opacity: 0;
     transform: translateY(20px);
@@ -774,6 +775,12 @@ a{
 .event-card:hover .event-photo img {
   transform: scale(1.05);
 }
+/* En pantallas táctiles no existe hover: conserva el zoom visual solicitado. */
+@media (hover: none), (pointer: coarse) {
+  .event-photo img {
+    transform: scale(1.05);
+  }
+}
 /* Sombra elegante */
 .event-photo::after {
   content: "";
@@ -1028,7 +1035,7 @@ a{
     background: var(--gold-strong-gradient);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+     color: #b38954;
     -webkit-text-fill-color: transparent;
   }
 /* SOLO el separador rotativo */
