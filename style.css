@@ -1648,7 +1648,7 @@ section.is-visible .btn-outline:nth-of-type(2) {
   transform: translateY(0) scale(1);
 }
 .transfer-modal h3{
-  font-size:20px;
+  font-size:12px;
   font-family: var(--title);
          /* Degradado dorado */
          background: linear-gradient(135deg, #8b6a3e 0%, #c9a26a 24%, #8d7244 48%, #e8c997 66%, #b38954 100%);
@@ -2102,7 +2102,7 @@ section.is-visible .btn-outline:nth-of-type(2) {
 .no-kids p.section-copy{
   margin:8px 0 0;
   font-family:var(--text);
-  font-size:20px;
+  font-size:12px;
   font-weight:300;
   line-height:1.45;
   background:var(--gold-strong-gradient);
@@ -2111,6 +2111,7 @@ section.is-visible .btn-outline:nth-of-type(2) {
   color:transparent;
   -webkit-text-fill-color:transparent;
 }
+
 
 .closing-quote{
   margin:0 0 18px !important;
